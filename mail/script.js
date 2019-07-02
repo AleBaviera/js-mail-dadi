@@ -1,6 +1,6 @@
 // 1 -Chiedi all’utente la sua email,  controlla che sia nella lista di chi può accedere e stampa un messaggio appropriato;
 // dichiaraz var
-var mail, esito;
+var mail, esito, messaggio;
 esito = document.getElementById('mio-id');
 console.log(esito);
 
@@ -12,16 +12,19 @@ console.log(mailinglist);
 mail = prompt('inserisci la tua email');
 console.log(mail);
 // confronto con array
+messaggio = 'non puoi accedere!';
 for (var i = 0; i < mailinglist.length; i++){
   console.log(mailinglist[i]);
+
   if (mail === mailinglist[i]){
 
-    esito.innerHTML = 'ok, prosegui!';
-    console.log(esito);
+    messaggio = 'ok, prosegui!';
+    console.log('ok prosegui');
   }
-  else{
-    esito.innerHTML = 'non puoi accedere!';
-  }
+
+
+
 }
 
 // esito
+esito.innerHTML = messaggio;
