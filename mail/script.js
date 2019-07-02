@@ -10,7 +10,7 @@ console.log(mailinglist);
 mail = prompt('inserisci la tua email');
 console.log(mail);
 // confronto con array
-for (var i = 0, i <= mailinglist.length, i++){
+for (var i = 0; i <= mailinglist.length; i++){
   if (mail === mailinglist[i]){
     document.getElementById('mio-id').innerHTML = 'ok, prosegui!';
   }
